@@ -327,6 +327,75 @@ img, svg { display: block; max-width: 100%; }
 .day-card h3 { font-size: 1.02rem; }
 .day-card p { font-size: 0.9rem; }
 
+/* ============ MEALS & NUTRITION ============ */
+.menu-intro {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.menu-intro p { font-size: 1.02rem; }
+
+.menu-week { margin-bottom: 52px; }
+.menu-week:last-child { margin-bottom: 0; }
+
+.menu-week-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+}
+.menu-week-title::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--marigold);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.menu-day {
+  background: var(--cream);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+}
+.menu-day-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--forest);
+  font-size: 1.02rem;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--paper-line);
+}
+.menu-meal { margin-bottom: 14px; }
+.menu-meal:last-child { margin-bottom: 0; }
+.menu-meal p { font-size: 0.87rem; margin: 0; color: var(--ink-soft); line-height: 1.5; }
+
+.meal-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.meal-label--breakfast { background: rgba(239, 162, 60, 0.2); color: var(--marigold-dark); }
+.meal-label--lunch { background: rgba(74, 111, 165, 0.16); color: var(--blueberry-dark); }
+.meal-label--snack { background: var(--blush); color: var(--blueberry-dark); }
+
+
 /* ============ ENROLL / CONTACT ============ */
 .enroll {
   background: var(--forest);
@@ -387,6 +456,7 @@ img, svg { display: block; max-width: 100%; }
   .support-grid { grid-template-columns: 1fr; }
   .day-grid { grid-template-columns: 1fr 1fr; }
   .enroll { grid-template-columns: 1fr; padding: 36px 24px; }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -410,6 +480,7 @@ img, svg { display: block; max-width: 100%; }
   .section { padding: 60px 0; }
   .enroll { padding: 32px 22px; }
   .hero { padding-top: 48px; padding-bottom: 40px; }
+  .menu-grid { grid-template-columns: 1fr; }
 }
 
 /* Focus visibility across interactive elements */
