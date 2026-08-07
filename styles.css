@@ -1,4 +1,6 @@
-
+/* ============================================================
+   MOTHER'S LOVE PRESCHOOL & DAYCARE — Design Tokens
+   ============================================================ */
 
 :root {
   --cream: #FBF3E7;
@@ -236,21 +238,89 @@ img, svg { display: block; max-width: 100%; }
 .trust-grid .stat-num { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; color: var(--marigold); display: block; }
 .trust-grid .stat-label { font-size: 0.82rem; color: rgba(251,243,231,0.78); }
 
-/* ============ FEATURE / BULLETIN CARDS ============ */
-.feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-.feature-card { background: var(--cream); border: 1px solid var(--paper-line); border-radius: var(--radius-md); padding: 26px 24px; box-shadow: var(--shadow-card); }
-.feature-card .icon { width: 44px; height: 44px; margin-bottom: 14px; color: var(--blueberry); }
-.feature-card h3 { margin-bottom: 0.4em; }
-.feature-card p { margin-bottom: 0; font-size: 0.96rem; }
+/* ============ WHY US — photo-left layout ============ */
+.why-us-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: start;
+}
+.why-us-photo {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--blush);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 110px;
+}
+.why-us-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.why-us-content .section-head {
+  text-align: left;
+  margin: 0 0 32px;
+  max-width: none;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.feature-card {
+  background: var(--cream);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-card);
+}
+.feature-card .icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 12px;
+  color: var(--blueberry);
+}
+.feature-card h3 { margin-bottom: 0.4em; font-size: 1.1rem; }
+.feature-card p { margin-bottom: 0; font-size: 0.94rem; }
+
+/* ============ PROGRAMS — content-left, photo-right layout ============ */
+.programs-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: start;
+}
+.programs-content .section-head {
+  text-align: left;
+  margin: 0 0 32px;
+  max-width: none;
+}
+.programs-photo {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--blush);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 110px;
+}
+.programs-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* ============ PROGRAMS — pinned corkboard cards (signature element) ============ */
 .corkboard {
   background: var(--forest-2);
   border-radius: var(--radius-lg);
-  padding: 56px 40px 46px;
+  padding: 48px 32px 40px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 22px;
   position: relative;
 }
 .pin-card { background: var(--cream); border-radius: 6px; padding: 26px 20px 22px; position: relative; box-shadow: var(--shadow-card); transition: transform .2s ease; }
@@ -289,19 +359,64 @@ img, svg { display: block; max-width: 100%; }
 .pin-card h3 { margin-bottom: 0.35em; font-size: 1.2rem; }
 .pin-card p { font-size: 0.92rem; margin-bottom: 0; }
 
-/* ============ MISSION / PULL QUOTE ============ */
-.mission-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
-.pull-quote {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  font-weight: 600;
-  color: var(--cream);
-  line-height: 1.35;
-  border-left: 4px solid var(--marigold);
-  padding-left: 24px;
+/* ============ GALLERY ============ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.gallery-item {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============ MISSION — photo-left layout ============ */
+.mission-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: start;
+}
+.mission-photo {
   position: sticky;
   top: 110px;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--blush);
+  box-shadow: var(--shadow-card);
 }
+.mission-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mission-photo-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px 22px 22px;
+  background: linear-gradient(to top, rgba(26, 43, 34, 0.92), rgba(26, 43, 34, 0) 75%);
+}
+.mission-photo-caption p {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.4;
+  border-left: 3px solid var(--marigold);
+  padding-left: 14px;
+  margin: 0;
+}
+
 .mission-copy p { color: rgba(251, 243, 231, 0.85); }
 .mission-copy p:first-child::first-letter {
   font-family: var(--font-display);
@@ -314,18 +429,139 @@ img, svg { display: block; max-width: 100%; }
 }
 
 /* ============ SUPPORT SERVICES ============ */
-.support-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.support-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: start;
+}
+.support-content .section-head {
+  text-align: left;
+  margin: 0 0 32px;
+  max-width: none;
+}
+.support-photo {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--blush);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 110px;
+}
+.support-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.support-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .support-item { display: flex; gap: 16px; align-items: flex-start; background: var(--cream); border-radius: var(--radius-md); padding: 22px; border: 1px solid var(--paper-line); }
 .support-item .icon { width: 36px; height: 36px; flex-shrink: 0; color: var(--marigold-dark); }
 .support-item h3 { font-size: 1.05rem; margin-bottom: 0.3em; }
 .support-item p { font-size: 0.93rem; margin-bottom: 0; }
 
+/* ============ A DAY WITH US — photo-left layout ============ */
+.day-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 56px;
+  align-items: start;
+}
+.day-photo {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--blush);
+  box-shadow: var(--shadow-card);
+  position: sticky;
+  top: 110px;
+}
+.day-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.day-content .section-head {
+  text-align: left;
+  margin: 0 0 32px;
+  max-width: none;
+}
+
 /* ============ DAY / SAFETY STRIP ============ */
-.day-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.day-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .day-card { text-align: center; padding: 8px; }
 .day-card .icon { width: 52px; height: 52px; margin: 0 auto 14px; color: var(--blueberry); background: var(--blush); border-radius: 50%; padding: 12px; }
 .day-card h3 { font-size: 1.02rem; }
 .day-card p { font-size: 0.9rem; }
+
+/* ============ MEALS & NUTRITION ============ */
+.menu-intro {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.menu-intro p { font-size: 1.02rem; }
+
+.menu-week { margin-bottom: 52px; }
+.menu-week:last-child { margin-bottom: 0; }
+
+.menu-week-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+}
+.menu-week-title::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--marigold);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.menu-day {
+  background: var(--cream);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+}
+.menu-day-name {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--forest);
+  font-size: 1.02rem;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--paper-line);
+}
+.menu-meal { margin-bottom: 14px; }
+.menu-meal:last-child { margin-bottom: 0; }
+.menu-meal p { font-size: 0.87rem; margin: 0; color: var(--ink-soft); line-height: 1.5; }
+
+.meal-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.meal-label--breakfast { background: rgba(239, 162, 60, 0.2); color: var(--marigold-dark); }
+.meal-label--lunch { background: rgba(74, 111, 165, 0.16); color: var(--blueberry-dark); }
+.meal-label--snack { background: var(--blush); color: var(--blueberry-dark); }
 
 /* ============ ENROLL / CONTACT ============ */
 .enroll {
@@ -380,13 +616,23 @@ img, svg { display: block; max-width: 100%; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-art { max-width: 420px; margin: 0 auto; }
   .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 26px 20px; }
+  .why-us-layout { grid-template-columns: 1fr; gap: 32px; }
+  .why-us-photo { position: static; aspect-ratio: 16 / 9; max-width: 480px; margin: 0 auto; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
+  .programs-layout { grid-template-columns: 1fr; gap: 32px; }
+  .programs-photo { position: static; aspect-ratio: 16 / 9; max-width: 480px; margin: 0 auto; }
   .corkboard { grid-template-columns: 1fr 1fr; }
-  .mission-grid { grid-template-columns: 1fr; }
-  .pull-quote { position: static; }
+  .mission-layout { grid-template-columns: 1fr; }
+  .mission-photo { position: relative; top: auto; aspect-ratio: 16 / 9; max-width: 480px; margin: 0 auto; }
   .support-grid { grid-template-columns: 1fr; }
+  .support-layout { grid-template-columns: 1fr; gap: 32px; }
+  .support-photo { position: static; aspect-ratio: 16 / 9; max-width: 480px; margin: 0 auto; }
   .day-grid { grid-template-columns: 1fr 1fr; }
+  .day-layout { grid-template-columns: 1fr; gap: 32px; }
+  .day-photo { position: static; aspect-ratio: 16 / 9; max-width: 480px; margin: 0 auto; }
   .enroll { grid-template-columns: 1fr; padding: 36px 24px; }
+  .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 640px) {
@@ -410,6 +656,7 @@ img, svg { display: block; max-width: 100%; }
   .section { padding: 60px 0; }
   .enroll { padding: 32px 22px; }
   .hero { padding-top: 48px; padding-bottom: 40px; }
+  .menu-grid { grid-template-columns: 1fr; }
 }
 
 /* Focus visibility across interactive elements */
