@@ -226,7 +226,6 @@ img, svg { display: block; max-width: 100%; }
   box-shadow: var(--shadow-card);
 }
 
-/* Scalloped divider between sections, like pinking-shears paper edge */
 .scallop { height: 26px; width: 100%; background-repeat: repeat-x; background-size: 34px 26px; background-position: center; }
 .scallop--cream-to-forest { background-color: var(--forest); background-image: radial-gradient(circle at 17px 0, var(--cream) 15px, transparent 16px); }
 .scallop--forest-to-cream2 { background-color: var(--cream-2); background-image: radial-gradient(circle at 17px 26px, var(--forest) 15px, transparent 16px); }
@@ -313,7 +312,7 @@ img, svg { display: block; max-width: 100%; }
   object-fit: cover;
 }
 
-/* ============ PROGRAMS — pinned corkboard cards (signature element) ============ */
+/* ============ PROGRAMS ============ */
 .corkboard {
   background: var(--forest-2);
   border-radius: var(--radius-lg);
@@ -377,7 +376,7 @@ img, svg { display: block; max-width: 100%; }
   object-fit: cover;
 }
 
-/* ============ MISSION — photo-left layout ============ */
+/* ============ MISSION ============ */
 .mission-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -461,7 +460,7 @@ img, svg { display: block; max-width: 100%; }
 .support-item h3 { font-size: 1.05rem; margin-bottom: 0.3em; }
 .support-item p { font-size: 0.93rem; margin-bottom: 0; }
 
-/* ============ A DAY WITH US — photo-left layout ============ */
+/* ============ A DAY WITH US ============ */
 .day-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
