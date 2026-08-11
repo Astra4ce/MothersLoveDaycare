@@ -141,14 +141,17 @@ img, svg { display: block; max-width: 100%; }
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--paper-line);
 }
+
 .nav-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 28px;
   padding: 14px var(--gutter);
   max-width: var(--container);
   margin: 0 auto;
 }
+
 .logo {
   display: flex;
   align-items: center;
@@ -181,7 +184,7 @@ img, svg { display: block; max-width: 100%; }
 .nav-links a { color: var(--forest); text-decoration: none; font-weight: 700; font-size: 0.96rem; }
 .nav-links a:hover { color: var(--blueberry-dark); }
 
-.nav-cta { display: flex; margin-left: 1.5rem; align-items: center; gap: 18px; }
+.nav-cta { display: flex; align-items: center; gap: 18px; }
 
 .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
 .nav-toggle span { display: block; width: 24px; height: 3px; background: var(--forest); margin: 5px 0; border-radius: 2px; }
@@ -495,6 +498,24 @@ img, svg { display: block; max-width: 100%; }
 .day-card p { font-size: 0.9rem; }
 
 /* ============ MEALS & NUTRITION ============ */
+.menu-photo {
+  aspect-ratio: 16 / 9;
+  max-width: 900px;
+  margin: 12px auto 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--blush);
+  box-shadow: var(--shadow-card);
+}
+
+.menu-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#menu { padding-bottom: 30px; }
+
 .menu-intro {
   max-width: 720px;
   margin: 0 auto 48px;
@@ -631,6 +652,7 @@ img, svg { display: block; max-width: 100%; }
   .day-photo { position: static; aspect-ratio: 16 / 9; max-width: 480px; margin: 0 auto; }
   .enroll { grid-template-columns: 1fr; padding: 36px 24px; }
   .menu-grid { grid-template-columns: repeat(2, 1fr); }
+  .menu-photo { aspect-ratio: 16 / 9; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
