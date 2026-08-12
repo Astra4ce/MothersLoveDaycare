@@ -17,6 +17,17 @@ if (navToggle && nav) {
   });
 }
 
+// Obfuscated email
+document.querySelectorAll('.email-link').forEach((link) => {
+  const user = link.getAttribute('data-user');
+  const domain = link.getAttribute('data-domain');
+  if (user && domain) {
+    const address = `${user}@${domain}`;
+    link.setAttribute('href', `mailto:${address}`);
+    link.textContent = address;
+  }
+});
+
 // Footer year
 const yearEl = document.getElementById('year');
 if (yearEl) {
